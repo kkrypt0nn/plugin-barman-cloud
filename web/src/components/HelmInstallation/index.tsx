@@ -14,9 +14,8 @@ export function HelmInstallationSnippet({
   return (
     <CodeBlock language="sh">
       {`helm repo add cnpg https://cloudnative-pg.github.io/charts --force-update
-helm upgrade --install barman-cloud \\
-  --namespace cnpg-system \\
-  --create-namespace \\${versionArg}
+helm upgrade --install plugin-barman-cloud \\
+  --namespace cnpg-system \\${versionArg}
   cnpg/plugin-barman-cloud`}
     </CodeBlock>
   );
